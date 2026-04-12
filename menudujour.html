@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Nos plats du jour – Auberge de la Couronne</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ICONS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/header.css" />
+    <link rel="stylesheet" href="src/css/section.css" />
+    <link rel="stylesheet" href="src/css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="src/css/restaurant.css" />
+    <link rel="stylesheet" href="src/css/menudujour.css" />
+  </head>
+
+  <body data-dynamic-i18n>
+    <div class="loader"></div>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <div class="navbar_content">
+        <div class="navbar_menu">
+          <button class="burger_button" id="burger_button" aria-label="Menu">
+            <div class="burger_line"></div>
+            <div class="burger_line"></div>
+            <div class="burger_line"></div>
+          </button>
+          <ul>
+            <li>
+              <a href="index.html#restaurant" data-i18n="nav_restaurant"
+                >Restaurant</a
+              >
+            </li>
+            <li><a href="hotel-hub.html" data-i18n="nav_hotel">Hôtel</a></li>
+            <li>
+              <a href="index.html#histoire" data-i18n="nav_story"
+                >Notre histoire</a
+              >
+            </li>
+            <li>
+              <a href="index.html#informations" data-i18n="nav_contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="navbar_logo"
+          style="cursor: pointer"
+          onclick="location.href = 'index.html'"
+        >
+          <img
+            class="logo_white"
+            src="src/assets/images/logo-w.svg"
+            alt="Auberge de Mies Logo"
+          />
+          <img
+            class="logo_black"
+            src="src/assets/images/logo-b.svg"
+            alt="Auberge de Mies Logo"
+          />
+        </div>
+        <div class="navbar_buttons">
+          <div class="toggle_language" id="toggle-language">
+            <p class="toggle_language_current">FR</p>
+            <span class="material-symbols-outlined" id="arrow-down-icon"
+              >keyboard_arrow_down</span
+            >
+            <ul class="toggle_language_dropdown">
+              <li data-lang="fr">FR</li>
+              <li data-lang="en">EN</li>
+            </ul>
+          </div>
+          <button class="primary_button" data-i18n="btn_rooms">
+            Nos chambres
+          </button>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU -->
+      <div class="mobile_menu" id="mobile_menu">
+        <ul>
+          <li>
+            <a href="index.html#restaurant" data-i18n="nav_restaurant"
+              >Restaurant</a
+            >
+          </li>
+          <li><a href="hotel-hub.html" data-i18n="nav_hotel">Hôtel</a></li>
+          <li>
+            <a href="index.html#histoire" data-i18n="nav_story"
+              >Notre histoire</a
+            >
+          </li>
+          <li>
+            <a href="index.html#informations" data-i18n="nav_contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
+        <div class="mobile_lang_switch">
+          <button class="mobile_lang_btn active" data-lang="fr">FR</button>
+          <span class="mobile_lang_separator">|</span>
+          <button class="mobile_lang_btn" data-lang="en">EN</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION -->
+    <div class="section">
+      <div class="section_container menudujour_container">
+        <div class="section_header">
+          <a href="index.html" class="primary_button menudujour_back_btn">
+            <span class="material-symbols-outlined black_icon">arrow_back</span>
+          </a>
+          <h2 data-i18n="menu_title">Nos plats du jour</h2>
+          <p id="semaine_titre">Chargement...</p>
+          <div class="day_buttons" id="day_buttons"></div>
+        </div>
+
+        <!-- SWIPER -->
+        <div class="menu_swiper_wrapper">
+          <div class="swiper menuSwiper">
+            <div class="swiper-wrapper" id="swiper_wrapper">
+              <div class="swiper-slide">
+                <div class="restaurant_card menu_day_card">
+                  <div class="restaurant_card_container">
+                    <div class="restaurant_card_header">
+                      <img src="src/assets/images/logo-b.svg" alt="" />
+                      <h4>Chargement...</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PAGINATION -->
+        <div id="menu_swiper_pagination" class="menu_swiper_pagination"></div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="section footer_section">
+      <div class="section_container">
+        <div class="footer_content">
+          <div class="footer_case_left">
+            <img src="src/assets/images/logo-b.svg" alt="" />
+            <div class="footer_case_left_buttons">
+              <button
+                class="primary_button"
+                onclick="location.href = 'tel:+41227552490'"
+              >
+                <span class="material-symbols-outlined black_icon"
+                  >phone_in_talk</span
+                >
+                Réserver !
+              </button>
+              <button
+                class="primary_button"
+                onclick="
+                  window.open(
+                    'https://www.instagram.com/auberge_de_mies_la_couronne',
+                    '_blank',
+                  )
+                "
+              >
+                <img src="src/assets/icons/instagram.svg" alt="" />
+              </button>
+              <button
+                class="primary_button"
+                onclick="
+                  window.open(
+                    'https://www.facebook.com/lanouvellecouronnedemies/',
+                    '_blank',
+                  )
+                "
+              >
+                <img src="src/assets/icons/facebook.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="footer_case_right">
+            <div class="footer_case_right_col">
+              <h3>Navigation</h3>
+              <div>
+                <p
+                  style="cursor: pointer"
+                  onclick="location.href = 'index.html#restaurant'"
+                >
+                  <span class="material-symbols-outlined black_icon"
+                    >restaurant</span
+                  >Restaurant
+                </p>
+                <p
+                  style="cursor: pointer"
+                  onclick="location.href = 'hotel-hub.html'"
+                >
+                  <span class="material-symbols-outlined black_icon">bed</span
+                  >Hotel
+                </p>
+                <p
+                  style="cursor: pointer"
+                  onclick="location.href = 'menudujour.html'"
+                >
+                  <span class="material-symbols-outlined black_icon"
+                    >calendar_month</span
+                  >Nos plats du jour
+                </p>
+                <p
+                  style="cursor: pointer"
+                  onclick="location.href = 'index.html#histoire'"
+                >
+                  <span class="material-symbols-outlined black_icon"
+                    >history</span
+                  >Notre histoire
+                </p>
+              </div>
+            </div>
+            <div class="footer_case_right_col">
+              <h3>Contact</h3>
+              <div>
+                <p>
+                  <span class="material-symbols-outlined black_icon"
+                    >location_on</span
+                  >Rue du Village 30, 1295 Mies, Suisse
+                </p>
+                <p>
+                  <span class="material-symbols-outlined black_icon">phone</span
+                  >+41 22 755 24 90
+                </p>
+                <p>
+                  <span class="material-symbols-outlined black_icon">mail</span
+                  >info@aubergelacouronne.ch
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bottom_wrapper">
+        <div class="footer_bottom">
+          <p>© 2025 Auberge de Mies – La Couronne. Tous droits réservés.</p>
+          <div class="footer_bottom_links">
+            <a href="#">Mentions légales</a>
+            <a href="#">Confidentialité</a>
+            <a href="#">CGV</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/src/js/menu.js" defer></script>
+    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/animation.js"></script>
+    <script type="module" src="/src/js/translation.js"></script>
+  </body>
+</html>
