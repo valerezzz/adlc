@@ -1,0 +1,223 @@
+/* NAVBAR TOUJOURS SCROLLED */
+
+.navbar {
+  background-color: var(--white);
+  border-bottom-color: #000;
+}
+
+.navbar .navbar_menu ul li a,
+.navbar .toggle_language,
+.navbar .material-symbols-outlined,
+.navbar p {
+  color: #000;
+}
+
+.navbar .burger_line {
+  background-color: #000;
+}
+
+.navbar .logo_white {
+  opacity: 0;
+}
+
+.navbar .logo_black {
+  opacity: 1;
+}
+
+.hub_back_btn {
+  position: absolute;
+  left: var(--paddingWidth);
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .hub_back_btn {
+    display: none;
+  }
+}
+
+.section:not(.footer_section) {
+  padding-top: 10rem;
+}
+
+.hotel_hub_container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.hub_cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .hub_cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hub_cards .info_card_container {
+  gap: 16px;
+}
+
+.hub_cards .info_card_body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.hub_card_description {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--dark);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.hub_card_features {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.hub_card_feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hub_card_feature p {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--dark);
+}
+
+.hub_card_btn {
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 12px;
+}
+
+.hub_card_btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  filter: blur(4px);
+}
+
+.hub_card_btn:hover::after {
+  animation: btnShine 0.5s ease forwards;
+}
+
+.hub_card_btn--whatsapp {
+  background-color: #2c954c;
+  color: #fff;
+}
+
+.hub_card_btn--whatsapp img {
+  width: 16px;
+  height: 16px;
+}
+
+.hub_card_btn--online {
+  background-color: var(--yellow);
+  color: var(--dark);
+}
+
+.hub_card_btn--online .material-symbols-outlined {
+  color: var(--dark);
+}
+
+/* HELP FOOTER */
+
+.help_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.help_footer h3 {
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+
+  color: var(--dark);
+  text-align: center;
+}
+
+.help_footer_content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.help_footer_content p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--dark);
+}
+
+@media (max-width: 480px) {
+  .help_footer h3 {
+    font-size: 1.4rem;
+  }
+
+  .help_footer_content {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .help_footer_content p:first-child {
+    padding-right: 0;
+    border-right: none;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--dark);
+  }
+}
+
+.help_footer_content p:first-child {
+  padding-right: 2rem;
+  border-right: 1px solid var(--dark);
+}

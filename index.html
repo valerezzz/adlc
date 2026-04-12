@@ -1,0 +1,1304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Auberge de Mies – La Couronne | Restaurant & Hôtel de charme</title>
+    <meta
+      name="description"
+      content="Découvrez l'Auberge de Mies – La Couronne, restaurant gastronomique et hôtel de charme. Cuisine raffinée et chambres élégantes dans un cadre authentique."
+    />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Grotesk:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ICONS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/header.css" />
+    <link rel="stylesheet" href="src/css/section.css" />
+    <link rel="stylesheet" href="src/css/restaurant.css" />
+    <link rel="stylesheet" href="src/css/espace.css" />
+    <link rel="stylesheet" href="src/css/informations.css" />
+    <link rel="stylesheet" href="src/css/histoire.css" />
+    <link rel="stylesheet" href="src/css/localisation.css" />
+    <link rel="stylesheet" href="src/css/instagram.css" />
+    <link rel="stylesheet" href="src/css/formulaire.css" />
+    <link rel="stylesheet" href="src/css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="pageLoader" class="page-loader">
+      <div class="loader-content">
+        <div class="loader-crown">
+          <img src="src/assets/images/logo-b.svg" alt="Auberge de Mies" />
+        </div>
+        <div class="loader-slogan" data-i18n="loader_slogan">
+          Savourez le présent, inspiré par le passé
+        </div>
+        <div class="loader-bar">
+          <div class="loader-progress"></div>
+        </div>
+      </div>
+    </div>
+    <!-- VIDEO BACKGROUND -->
+    <video class="bg_video" autoplay muted loop playsinline>
+      <source src="src/assets/videos/background-2.mp4" type="video/mp4" />
+    </video>
+
+    <!-- DEBUT HEADER -->
+    <div class="header">
+      <div class="navbar">
+        <div class="navbar_content">
+          <div class="navbar_menu">
+            <button class="burger_button" id="burger_button" aria-label="Menu">
+              <div class="burger_line"></div>
+              <div class="burger_line"></div>
+              <div class="burger_line"></div>
+            </button>
+            <ul>
+              <li>
+                <a
+                  href="#restaurant"
+                  onclick="
+                    document
+                      .getElementById('restaurant')
+                      .scrollIntoView({ behavior: 'smooth' });
+                    return false;
+                  "
+                  data-i18n="nav_restaurant"
+                  >Restaurant</a
+                >
+              </li>
+              <li>
+                <a href="hotel-hub.html" data-i18n="nav_hotel">Auberge</a>
+              </li>
+              <li>
+                <a
+                  href="#histoire"
+                  onclick="
+                    document
+                      .querySelector('.histoire')
+                      .scrollIntoView({ behavior: 'smooth' });
+                    return false;
+                  "
+                  data-i18n="nav_story"
+                  >Notre histoire</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#informations"
+                  onclick="
+                    document
+                      .getElementById('informations')
+                      .scrollIntoView({ behavior: 'smooth' });
+                    return false;
+                  "
+                  data-i18n="nav_contact"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div
+            class="navbar_logo"
+            style="cursor: pointer"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+          >
+            <img
+              class="logo_white"
+              src="src/assets/images/logo-w.svg"
+              alt="Auberge de Mies Logo"
+            />
+            <img
+              class="logo_black"
+              src="src/assets/images/logo-b.svg"
+              alt="Auberge de Mies Logo"
+            />
+          </div>
+          <div class="navbar_buttons">
+            <div class="toggle_language" id="toggle-language">
+              <p class="toggle_language_current">FR</p>
+              <span class="material-symbols-outlined" id="arrow-down-icon"
+                >keyboard_arrow_down</span
+              >
+              <ul class="toggle_language_dropdown">
+                <li data-lang="fr">FR</li>
+                <li data-lang="en">EN</li>
+              </ul>
+            </div>
+            <button
+              class="primary_button"
+              data-i18n="btn_rooms"
+              onclick="location.href = 'hotel-hub.html'"
+            >
+              Nos chambres
+            </button>
+          </div>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div class="mobile_menu" id="mobile_menu">
+          <ul>
+            <li>
+              <a
+                href="#restaurant"
+                onclick="
+                  document
+                    .getElementById('restaurant')
+                    .scrollIntoView({ behavior: 'smooth' });
+                  return false;
+                "
+                data-i18n="nav_restaurant"
+                >Restaurant</a
+              >
+            </li>
+            <li><a href="hotel-hub.html" data-i18n="nav_hotel">Auberge</a></li>
+            <li>
+              <a
+                href="#histoire"
+                onclick="
+                  document
+                    .querySelector('.histoire')
+                    .scrollIntoView({ behavior: 'smooth' });
+                  return false;
+                "
+                data-i18n="nav_story"
+                >Notre histoire</a
+              >
+            </li>
+            <li>
+              <a
+                href="#informations"
+                onclick="
+                  document
+                    .getElementById('informations')
+                    .scrollIntoView({ behavior: 'smooth' });
+                  return false;
+                "
+                data-i18n="nav_contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div class="mobile_lang_switch">
+            <button class="mobile_lang_btn active" data-lang="fr">FR</button>
+            <span class="mobile_lang_separator">|</span>
+            <button class="mobile_lang_btn" data-lang="en">EN</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="header_content">
+        <div class="header_content_texts">
+          <h2 data-i18n-html="header_welcome">
+            Bienvenue à l’auberge de Mies,<br class="mobile-br" />
+            la Couronne !
+          </h2>
+          <h1 data-i18n-html="header_tagline">
+            Savourez<br class="mobile-br" />
+            le présent<br />
+            inspiré<br class="mobile-br" />
+            par le passé
+          </h1>
+        </div>
+        <div class="header_content_buttons">
+          <button
+            class="secondary_button"
+            onclick="location.href = 'menudujour.html'"
+          >
+            <span class="material-symbols-outlined"> restaurant </span>
+            <span data-i18n="header_btn_menu">Nos plâts du jour</span>
+          </button>
+          <div class="reserver_dropdown">
+            <button class="primary_button" id="reserver_btn">
+              <span class="material-symbols-outlined black_icon">
+                calendar_check </span
+              ><span data-i18n="header_btn_reserver">Réserver</span>
+              <span class="material-symbols-outlined black_icon"
+                >keyboard_arrow_down</span
+              >
+            </button>
+            <div class="reserver_dropdown_menu">
+              <button
+                class="reserver_dropdown_item reserver_dropdown_item--green"
+                onclick="
+                  document
+                    .getElementById('formulaire-restaurant')
+                    .scrollIntoView({ behavior: 'smooth' })
+                "
+              >
+                <img src="src/assets/icons/whatsapp.svg" alt="" />
+                <span data-i18n="header_btn_formulaire">Formulaire</span>
+              </button>
+              <button
+                class="reserver_dropdown_item reserver_dropdown_item--blue"
+                onclick="location.href = 'tel:+41227552490'"
+              >
+                <span class="material-symbols-outlined"> phone_in_talk </span>
+                <span data-i18n="header_btn_telephone">Téléphone</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <img
+          class="arrow_scroll"
+          src="src/assets/images/arrow_down.svg"
+          alt=""
+        />
+      </div>
+    </div>
+    <!-- FIN HEADER -->
+
+    <!-- DEBUT INTRO -->
+    <div id="intro" class="section">
+      <div class="section_container">
+        <div class="section_header">
+          <h2 data-i18n-html="intro_title">
+            Une auberge<br class="mobile-br" />à Mies
+          </h2>
+          <p data-i18n="intro_desc">
+            Située au cœur de Mies, l'Auberge de la Couronne allie charme
+            traditionnel et confort moderne. Cet hôtel accueillant situé près du
+            lac Léman propose des chambres élégantes, un restaurant raffiné et
+            un accès facile à Genève et à Lausanne.
+          </p>
+        </div>
+        <div id="intro-slider" class="section_slider">
+          <img src="src/assets/images/intro-1.webp" alt="Auberge de Mies 1" />
+          <img src="src/assets/images/intro-2.webp" alt="Auberge de Mies 2" />
+          <img src="src/assets/images/intro-3.webp" alt="Auberge de Mies 3" />
+        </div>
+      </div>
+    </div>
+    <!-- FIN INTRO -->
+
+    <!-- DEBUT TRANSITION -->
+    <div id="transition-restaurant" class="transition">
+      <div class="transition_container">
+        <div class="transition_row">
+          <h3>RESTAURANT</h3>
+          <h3>-</h3>
+          <h3>RESTAURANT</h3>
+          <h3>-</h3>
+          <h3>RESTAURANT</h3>
+          <h3>-</h3>
+          <h3>RESTAURANT</h3>
+          <h3>-</h3>
+          <h3>RESTAURANT</h3>
+        </div>
+        <div class="transition_row">
+          <h3>RESTAURANT</h3>
+          <h3>-</h3>
+          <h3>RESTAURANT</h3>
+          <h3>-</h3>
+          <h3>RESTAURANT</h3>
+          <h3>-</h3>
+          <h3>RESTAURANT</h3>
+          <h3>-</h3>
+          <h3>RESTAURANT</h3>
+        </div>
+      </div>
+    </div>
+    <!-- FIN TRANSITION -->
+
+    <!-- DEBUT RESTAURANT -->
+    <div id="restaurant" class="section">
+      <div class="section_container">
+        <div class="section_header">
+          <h2 data-i18n="restaurant_title">Notre carte</h2>
+          <p data-i18n="restaurant_desc">
+            Explorez nos différentes offres culinaires concoctées par notre chef
+          </p>
+        </div>
+        <div class="section_content">
+          <div class="restaurant_navigation_buttons">
+            <!-- <button
+              class="navigation_button active_button"
+              data-target="suggestions"
+            >
+              <span class="material-symbols-outlined black_icon"> star </span>
+              <span data-i18n="restaurant_nav_suggestions">Suggestions</span>
+            </button> -->
+            <button
+              class="navigation_button active_button"
+              data-target="carte_des_mets"
+            >
+              <span class="material-symbols-outlined black_icon">
+                restaurant
+              </span>
+              <span data-i18n="restaurant_nav_carte">Carte des Mets</span>
+            </button>
+            <button class="navigation_button" data-target="boissons">
+              <span class="material-symbols-outlined black_icon">
+                wine_bar
+              </span>
+              <span data-i18n="restaurant_nav_boissons">Boissons</span>
+            </button>
+          </div>
+          <div class="restaurant_content">
+            <!-- <div class="suggestions">
+              <div class="restaurant_card">
+                <div class="restaurant_card_container">
+                  <div class="restaurant_card_header">
+                    <img src="src/assets/images/logo-b.svg" alt="" />
+                    <h4>Menu d'hiver</h4>
+                  </div>
+                  <div class="restaurant_card_body">
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Taglioni aux truffes noires</h5>
+                      </div>
+                      <div class="plat_r">
+                        <p>28.00 CHF</p>
+                      </div>
+                    </div>
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Filet de boeuf Rossini 200g</h5>
+                        <p>
+                          Avec son jus, servi avec choux kale et pomme de terre
+                          grenailles
+                        </p>
+                      </div>
+                      <div class="plat_r">
+                        <p>24.00 CHF</p>
+                      </div>
+                    </div>
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Terrine de fois gras</h5>
+                      </div>
+                      <div class="plat_r">
+                        <p>24.00 CHF</p>
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Fondue moitié-moitié</h5>
+                        <p>Vacherin et gruyère</p>
+                      </div>
+                      <div class="plat_r">
+                        <p>25.00 CHF</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <div class="carte_des_mets">
+              <div class="restaurant_card">
+                <div class="restaurant_card_container">
+                  <div class="restaurant_card_header">
+                    <img src="src/assets/images/logo-b.svg" alt="" />
+                    <h4>Entrées</h4>
+                  </div>
+                  <div class="restaurant_card_body">
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Terrine de foie gras maison</h5>
+                        <p>Confiture d'orange et citron, pain brioche</p>
+                      </div>
+                      <div class="plat_r">
+                        <p>CHF 24.00</p>
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Tartare de dorade aux agrumes et avocat</h5>
+                        <p>Huile d'olive, avocat</p>
+                      </div>
+                      <div class="plat_r">
+                        <p>CHF 19.50</p>
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Salade de cocktail de crevettes</h5>
+                        <p>Sauce calypso, orange, fenouil</p>
+                      </div>
+                      <div class="plat_r">
+                        <p>CHF 17.50</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="restaurant_card">
+                <div class="restaurant_card_container">
+                  <div class="restaurant_card_header">
+                    <img src="src/assets/images/logo-b.svg" alt="" />
+                    <h4>Plats Principaux</h4>
+                  </div>
+                  <div class="restaurant_card_body">
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Filet de bœuf 200gr</h5>
+                        <p>
+                          Mayonnaise au chimichurri, chips de patates douces
+                        </p>
+                      </div>
+                      <div class="plat_r">
+                        <p>CHF 47.00</p>
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Hamburger de bison de Collex-Bossy</h5>
+                        <p>Pain, steak haché bison, fromage, frites</p>
+                      </div>
+                      <div class="plat_r">
+                        <p>CHF 31.00</p>
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Filet de Sandre 160gr beurre blanc</h5>
+                        <p>Légumes de saison, écrasé de pommes de terre</p>
+                      </div>
+                      <div class="plat_r">
+                        <p>CHF 34.50</p>
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Coquelet rôti entier</h5>
+                        <p>Sauce moutarde ancienne, pommes de terre au four</p>
+                      </div>
+                      <div class="plat_r">
+                        <p>CHF 29.50</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="restaurant_card">
+                <div class="restaurant_card_container">
+                  <div class="restaurant_card_header">
+                    <img src="src/assets/images/logo-b.svg" alt="" />
+                    <h4>Desserts</h4>
+                  </div>
+                  <div class="restaurant_card_body">
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Tiramisu</h5>
+                      </div>
+                      <div class="plat_r">
+                        <p>CHF 12.00</p>
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Crème brûlée à la fève de tonka</h5>
+                      </div>
+                      <div class="plat_r">
+                        <p>CHF 12.00</p>
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Cannolo siciliano à la ricotta</h5>
+                        <p>Ricotta de brebis, éclats de chocolat</p>
+                      </div>
+                      <div class="plat_r">
+                        <p>CHF 9.50</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="boissons">
+              <div class="restaurant_card">
+                <div class="restaurant_card_container">
+                  <div class="restaurant_card_header">
+                    <img src="src/assets/images/logo-b.svg" alt="" />
+                    <h4>Vins Locaux</h4>
+                  </div>
+                  <div class="restaurant_card_body">
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Chasselas</h5>
+                        <p>A.O.C La Côte</p>
+                      </div>
+                      <div class="plat_r">
+                        <p>CHF 39.00</p>
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Pinot noir</h5>
+                        <p>Cuvée spéciale</p>
+                      </div>
+                      <div class="plat_r">
+                        <p>CHF 54.00</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="restaurant_card">
+                <div class="restaurant_card_container">
+                  <div class="restaurant_card_header">
+                    <img src="src/assets/images/logo-b.svg" alt="" />
+                    <h4>Apéritifs</h4>
+                  </div>
+                  <div class="restaurant_card_body">
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Martini rouge</h5>
+                        <p>Classique italien</p>
+                      </div>
+                      <div class="plat_r">
+                        <p>CHF 7.00</p>
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Kir vin blanc</h5>
+                        <p>Spécialité régionale</p>
+                      </div>
+                      <div class="plat_r">
+                        <p>CHF 8.00</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="restaurant_card">
+                <div class="restaurant_card_container">
+                  <div class="restaurant_card_header">
+                    <img src="src/assets/images/logo-b.svg" alt="" />
+                    <h4>Boissons Chaudes</h4>
+                  </div>
+                  <div class="restaurant_card_body">
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Café, Expresso</h5>
+                        <p>Torréfaction artisanale</p>
+                      </div>
+                      <div class="plat_r">
+                        <p>CHF 3.90</p>
+                      </div>
+                    </div>
+                    <div class="separator"></div>
+                    <div class="plat">
+                      <div class="plat_l">
+                        <h5>Chocolat chaud</h5>
+                        <p>Fait maison</p>
+                      </div>
+                      <div class="plat_r">
+                        <p>CHF 4.70</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="restaurant_buttons">
+            <button
+              class="primary_button"
+              onclick="location.href = 'menudujour.html'"
+            >
+              <span class="material-symbols-outlined black_icon">
+                restaurant
+              </span>
+              <span data-i18n="restaurant_btn_menu"
+                >Découvrir nos plâts du jour</span
+              >
+            </button>
+            <button class="third_button" onclick="ouvrirCarte()">
+              <span class="material-symbols-outlined black_icon">
+                menu_book
+              </span>
+              <span data-i18n="restaurant_btn_carte"
+                >Voir la carte complète</span
+              >
+            </button>
+          </div>
+          <div id="restaurant-slider" class="section_slider">
+            <img src="src/assets/images/menu-1.webp" alt="Auberge de Mies 1" />
+            <img src="src/assets/images/menu-2.webp" alt="Auberge de Mies 2" />
+            <img src="src/assets/images/menu-3.webp" alt="Auberge de Mies 3" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN RESTAURANT -->
+
+    <!-- DEBUT ESPACES -->
+    <div id="espaces" class="section">
+      <div class="section_container">
+        <div class="section_header">
+          <h2 data-i18n="espaces_title">Nos espaces</h2>
+          <p data-i18n="espaces_desc">
+            Découvrez les différents lieux de notre auberge, chacun offrant une
+            ambiance unique.
+          </p>
+        </div>
+        <div class="espace_content">
+          <div class="espace_gallery">
+            <div class="espace_gallery_item">
+              <img src="src/assets/images/espace-1.webp" alt="Espace 1" />
+            </div>
+            <div class="espace_gallery_item">
+              <img src="src/assets/images/espace-2.webp " alt="Espace 2" />
+            </div>
+            <div class="espace_gallery_item">
+              <img src="src/assets/images/espace-3.webp" alt="Espace 3" />
+            </div>
+            <div class="espace_gallery_item">
+              <img src="src/assets/images/espace-4.webp" alt="Espace 4" />
+            </div>
+            <div class="espace_gallery_item">
+              <img src="src/assets/images/espace-5.webp" alt="Espace 5" />
+            </div>
+            <div class="espace_gallery_item">
+              <img src="src/assets/images/espace-6.webp" alt="Espace 6" />
+            </div>
+          </div>
+          <button
+            class="primary_button"
+            onclick="
+              document
+                .getElementById('formulaire-restaurant')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+          >
+            <span class="material-symbols-outlined black_icon">
+              restaurant
+            </span>
+            <span data-i18n="espaces_btn">Réserver une table</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- FIN ESPACES -->
+
+    <!-- DEBUT INFORMATIONS -->
+    <div id="informations" class="section">
+      <div class="section_container">
+        <div class="section_header">
+          <h2 data-i18n="info_title">Informations</h2>
+          <p data-i18n="info_desc">Retrouvez toutes nos coordonnées</p>
+        </div>
+        <div class="informations_content">
+          <div class="info_card">
+            <div class="info_card_container">
+              <div class="info_card_header">
+                <img src="src/assets/images/logo-b.svg" alt="" />
+                <h4 data-i18n="info_adresse_title">Adresse</h4>
+              </div>
+              <div class="info_card_body">
+                <div class="separator"></div>
+                <p class="information" data-i18n-html="info_adresse_content">
+                  Rue du Village 30<br />1295 Mies, Suisse
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="info_card">
+            <div class="info_card_container">
+              <div class="info_card_header">
+                <img src="src/assets/images/logo-b.svg" alt="" />
+                <h4 data-i18n="info_tel_title">Téléphone</h4>
+              </div>
+              <div class="info_card_body">
+                <div class="separator"></div>
+                <p class="information" data-i18n-html="info_tel_content">
+                  +41 22 755 24 90<br />Réservations recommandées
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="info_card">
+            <div class="info_card_container">
+              <div class="info_card_header">
+                <img src="src/assets/images/logo-b.svg" alt="" />
+                <h4 data-i18n="info_email_title">EMAIL</h4>
+              </div>
+              <div class="info_card_body">
+                <div class="separator"></div>
+                <p class="information" data-i18n-html="info_email_content">
+                  info@aubergelacouronne.ch<br />
+                  Réponse sous 24h
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="info_card">
+            <div class="info_card_container">
+              <div class="info_card_header">
+                <img src="src/assets/images/logo-b.svg" alt="" />
+                <h4 data-i18n="info_horaires_title">HORAIRES</h4>
+              </div>
+              <div class="info_card_body">
+                <div class="separator"></div>
+                <p class="information" data-i18n-html="info_horaires_content">
+                  Lun-Jeu : 09h00-14h00 et 17h30-23h30<br />
+                  Vendredi : 09h00-14h00 et 17h00-23h30<br />
+                  Samedi : 17h00-23h30 <br />
+                  Dimanche : 9h00-14h30 Brunch
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN INFORMATIONS -->
+
+    <!-- DEBUT TRANSITION -->
+    <div id="transition-restaurant" class="transition">
+      <div class="transition_container">
+        <div class="transition_row">
+          <h3>AUBERGE</h3>
+          <h3>-</h3>
+          <h3>AUBERGE</h3>
+          <h3>-</h3>
+          <h3>AUBERGE</h3>
+          <h3>-</h3>
+          <h3>AUBERGE</h3>
+          <h3>-</h3>
+          <h3>AUBERGE</h3>
+        </div>
+        <div class="transition_row">
+          <h3>AUBERGE</h3>
+          <h3>-</h3>
+          <h3>AUBERGE</h3>
+          <h3>-</h3>
+          <h3>AUBERGE</h3>
+          <h3>-</h3>
+          <h3>AUBERGE</h3>
+          <h3>-</h3>
+          <h3>AUBERGE</h3>
+        </div>
+      </div>
+    </div>
+    <!-- FIN TRANSITION -->
+
+    <!-- DEBUT CHAMBRES -->
+    <div id="chambres" class="section">
+      <div class="section_container">
+        <div class="section_header">
+          <h2 data-i18n="chambres_title">Nos Chambres</h2>
+          <p data-i18n="chambres_desc">
+            Votre prochain séjour prend forme. Il ne reste plus qu'à réserver
+            votre chambre
+          </p>
+        </div>
+        <div id="chambres-slider" class="section_slider">
+          <img src="src/assets/images/room-1.webp" alt="Auberge de Mies 1" />
+          <img src="src/assets/images/room-2.webp" alt="Auberge de Mies 2" />
+          <img src="src/assets/images/room-3.webp" alt="Auberge de Mies 3" />
+          <img src="src/assets/images/room-4.webp" alt="Auberge de Mies 4" />
+          <img src="src/assets/images/room-5.webp" alt="Auberge de Mies 5" />
+          <img src="src/assets/images/room-6.webp" alt="Auberge de Mies 6" />
+          <img src="src/assets/images/room-7.webp" alt="Auberge de Mies 7" />
+        </div>
+        <button
+          class="primary_button"
+          onclick="location.href = 'hotel-hub.html'"
+        >
+          <span class="material-symbols-outlined black_icon"> bed </span>
+          <span data-i18n="chambres_btn">Réserver une chambre</span>
+        </button>
+      </div>
+    </div>
+    <!-- FIN CHAMBRES -->
+
+    <!-- DEBUT HISTOIRE -->
+    <div class="histoire">
+      <div class="histoire_container">
+        <h2 data-i18n-html="histoire_title">
+          Notre<br class="mobile-br" />
+          histoire
+        </h2>
+        <div class="histoire_texts">
+          <p data-i18n="histoire_p1">
+            Depuis plus de trois générations, l'Auberge de Mies – La Couronne
+            perpétue la tradition de l'hospitalité suisse. Nichée au cœur du
+            village de Mies, notre établissement familial a su préserver son
+            authenticité tout en s'adaptant aux exigences modernes.
+          </p>
+          <p data-i18n="histoire_p2">
+            Fondée en 1892, La Couronne a toujours été un lieu de rencontre
+            privilégié pour les habitants de la région et les voyageurs de
+            passage. Aujourd'hui, nous continuons cette belle histoire en
+            proposant une cuisine d'exception et un hébergement de qualité.
+          </p>
+          <p data-i18n-html="histoire_p3">
+            Plus de 130 ans d'histoire<br />
+            Tradition et excellence depuis 1892
+          </p>
+        </div>
+        <img src="src/assets/images/logo-w.svg" alt="" />
+      </div>
+    </div>
+    <!-- FIN HISTOIRE -->
+
+    <!-- DEBUT LOCALISATION -->
+    <div id="localisation" class="section">
+      <div class="section_container">
+        <div class="section_header">
+          <h2 data-i18n="localisation_title">Localisation</h2>
+          <p data-i18n-html="localisation_desc">
+            Auberge de Mies – La Couronne<br />
+            Rue du Village 30, 1295 Mies, Suisse
+          </p>
+        </div>
+        <div class="localisation_map">
+          <iframe
+            src="https://maps.google.com/maps?q=Rue+du+Village+30,+1295+Mies,+Suisse&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="450"
+            style="border: 0; border-radius: 12px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Auberge de Mies – La Couronne"
+          ></iframe>
+        </div>
+        <div class="localisation_cards">
+          <div class="localisation_card">
+            <span class="material-symbols-outlined black_icon">
+              local_parking
+            </span>
+            <h5 data-i18n="localisation_parking_title">Parking</h5>
+            <p data-i18n="localisation_parking_desc">
+              Places de parking gratuites disponibles devant l'établissement
+            </p>
+          </div>
+          <div class="localisation_card">
+            <span class="material-symbols-outlined black_icon">
+              directions_bus
+            </span>
+            <h5 data-i18n="localisation_transport_title">Transport</h5>
+            <p data-i18n="localisation_transport_desc">
+              Accessible en transport public, arrêt de bus à proximité
+            </p>
+          </div>
+          <div class="localisation_card">
+            <span class="material-symbols-outlined black_icon">
+              accessible
+            </span>
+            <h5 data-i18n="localisation_access_title">Accessibilité</h5>
+            <p data-i18n="localisation_access_desc">
+              Établissement accessible aux personnes à mobilité réduite
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN LOCALISATION -->
+
+    <!-- DEBUT INSTAGRAM -->
+    <div id="instagram" class="section">
+      <div class="section_container">
+        <div class="section_header">
+          <h2 data-i18n="instagram_title">Suivez-nous sur Instagram</h2>
+          <p data-i18n="instagram_desc">
+            Suivez-nous sur Instagram pour découvrir nos dernières actualités
+          </p>
+          <p>@auberge_de_mies_la_couronne</p>
+        </div>
+        <div class="instagram_grid">
+          <img
+            src="src/assets/images/ig-1.webp"
+            alt="Instagram Auberge de Mies"
+          />
+          <img
+            src="src/assets/images/ig-2.webp"
+            alt="Instagram Auberge de Mies"
+          />
+          <img
+            src="src/assets/images/ig-3.webp"
+            alt="Instagram Auberge de Mies"
+          />
+          <img
+            src="src/assets/images/ig-4.webp"
+            alt="Instagram Auberge de Mies"
+          />
+        </div>
+        <button
+          class="primary_button"
+          onclick="
+            window.open(
+              'https://www.instagram.com/auberge_de_mies_la_couronne',
+              '_blank',
+            )
+          "
+        >
+          <img src="src/assets/icons/instagram.svg" alt="" />
+          <span data-i18n="instagram_btn">Suivez-nous !</span>
+        </button>
+      </div>
+    </div>
+    <!-- FIN INSTAGRAM -->
+
+    <!-- DEBUT FORMULAIRE -->
+    <div id="formulaire-restaurant" class="section forumulaire_section">
+      <div class="fomulaire_container">
+        <div class="formulaire_img">
+          <img src="src/assets/images/form.webp" alt="" />
+        </div>
+        <div class="formulaire_content">
+          <h2 data-i18n-html="form_resto_title">
+            Faites une réservation <br />
+            au restaurant !
+          </h2>
+          <form
+            id="whatsappForm"
+            class="formulaire_input"
+            onsubmit="sendWhatsAppReservation(event)"
+          >
+            <!-- Nom complet -->
+            <div class="form_row">
+              <div class="form_field">
+                <label data-i18n="form_label_nom">Nom complet</label>
+                <input
+                  id="fullName"
+                  type="text"
+                  data-i18n-placeholder="form_placeholder_nom"
+                  placeholder="Votre nom complet"
+                />
+              </div>
+            </div>
+
+            <!-- Date + Heure -->
+            <div class="form_row">
+              <div class="form_field">
+                <label data-i18n="form_label_date">Date</label>
+                <div class="input_icon">
+                  <input
+                    id="date-resto"
+                    type="text"
+                    placeholder="jj/mm/aaaa"
+                    readonly
+                  />
+                  <span class="material-symbols-outlined">calendar_month</span>
+                </div>
+              </div>
+              <div class="form_field">
+                <label data-i18n="form_label_heure">Heure</label>
+                <div class="input_icon">
+                  <input
+                    id="heure-resto"
+                    type="text"
+                    placeholder="--:--"
+                    readonly
+                  />
+                  <span class="material-symbols-outlined">schedule</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Nombre de personnes -->
+            <div class="form_row">
+              <div class="form_field">
+                <label data-i18n="form_label_personnes"
+                  >Nombre de personnes</label
+                >
+                <div class="input_icon">
+                  <select id="guestCount">
+                    <option
+                      value=""
+                      disabled
+                      selected
+                      data-i18n="form_select_default"
+                    >
+                      Sélectionnez
+                    </option>
+                    <option value="1">1 personne</option>
+                    <option value="2">2 personnes</option>
+                    <option value="3">3 personnes</option>
+                    <option value="4">4 personnes</option>
+                    <option value="5">5 personnes</option>
+                    <option value="6">6 personnes</option>
+                    <option value="7+">7+ personnes</option>
+                  </select>
+                  <span class="material-symbols-outlined">group</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Message additionnel -->
+            <div class="form_row">
+              <div class="form_field">
+                <label
+                  ><span data-i18n="form_label_message"
+                    >Message additionnel</span
+                  >
+                  <span class="optional" data-i18n="form_label_optional"
+                    >(optionnel)</span
+                  ></label
+                >
+                <textarea
+                  id="additionalMessage"
+                  data-i18n-placeholder="form_placeholder_message"
+                  placeholder="Ex: Table près de la fenêtre"
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- Bouton -->
+            <button type="submit" class="whatsapp_button">
+              <img src="src/assets/icons/whatsapp.svg" alt="" />
+              <span data-i18n="form_btn_whatsapp">Réserver avec Whatsapp</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- FIN FORMULAIRE -->
+
+    <!-- DEBUT FOOTER -->
+    <footer id="footer" class="section footer_section">
+      <div class="section_container">
+        <div class="footer_content">
+          <div class="footer_case_left">
+            <img src="src/assets/images/logo-b.svg" alt="" />
+            <div class="footer_case_left_buttons">
+              <button
+                class="primary_button"
+                onclick="location.href = 'tel:+41227552490'"
+              >
+                <span class="material-symbols-outlined black_icon">
+                  phone_in_talk
+                </span>
+                Réserver !
+              </button>
+              <button
+                class="primary_button"
+                onclick="
+                  window.open(
+                    'https://www.instagram.com/auberge_de_mies_la_couronne',
+                    '_blank',
+                  )
+                "
+              >
+                <img src="src/assets/icons/instagram.svg" alt="" />
+              </button>
+              <button
+                class="primary_button"
+                onclick="
+                  window.open(
+                    'https://www.facebook.com/lanouvellecouronnedemies/',
+                    '_blank',
+                  )
+                "
+              >
+                <img src="src/assets/icons/facebook.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="footer_case_right">
+            <div class="footer_case_right_col">
+              <h3>Navigation</h3>
+              <div>
+                <p
+                  style="cursor: pointer"
+                  onclick="
+                    document
+                      .getElementById('restaurant')
+                      .scrollIntoView({ behavior: 'smooth' })
+                  "
+                >
+                  <span class="material-symbols-outlined black_icon">
+                    restaurant
+                  </span>
+                  Restaurant
+                </p>
+                <p
+                  style="cursor: pointer"
+                  onclick="location.href = 'hotel-hub.html'"
+                >
+                  <span class="material-symbols-outlined black_icon">
+                    bed
+                  </span>
+                  Hotel
+                </p>
+                <p
+                  style="cursor: pointer"
+                  onclick="location.href = 'menudujour.html'"
+                >
+                  <span class="material-symbols-outlined black_icon">
+                    calendar_month
+                  </span>
+                  Nos plats du jour
+                </p>
+                <p
+                  style="cursor: pointer"
+                  onclick="
+                    document
+                      .querySelector('.histoire')
+                      .scrollIntoView({ behavior: 'smooth' })
+                  "
+                >
+                  <span class="material-symbols-outlined black_icon">
+                    history
+                  </span>
+                  Notre histoire
+                </p>
+              </div>
+            </div>
+            <div class="footer_case_right_col">
+              <h3>Contact</h3>
+              <div>
+                <p>
+                  <span class="material-symbols-outlined black_icon">
+                    location_on
+                  </span>
+                  Rue du Village 30, 1295 Mies, Suisse
+                </p>
+                <p>
+                  <span class="material-symbols-outlined black_icon">
+                    phone
+                  </span>
+                  +41 22 755 24 90
+                </p>
+                <p>
+                  <span class="material-symbols-outlined black_icon">
+                    mail
+                  </span>
+                  info@aubergelacouronne.ch
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_bottom_wrapper">
+        <div class="footer_bottom">
+          <p>© 2025 Auberge de Mies – La Couronne. Tous droits réservés.</p>
+          <div class="footer_bottom_links">
+            <a href="#">Mentions légales</a>
+            <a href="#">Confidentialité</a>
+            <a href="#">CGV</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- FIN FOOTER -->
+
+    <!-- LIGHTBOX CARTE -->
+    <div
+      id="carte-lightbox"
+      class="carte-lightbox"
+      onclick="this.classList.remove('open')"
+    >
+      <span class="carte-lightbox-close material-symbols-outlined">close</span>
+      <div class="carte-lightbox-inner" onclick="event.stopPropagation()">
+        <img
+          id="carte-lightbox-img"
+          src="src/assets/images/menus/menu-1.webp"
+          alt="Carte complète"
+        />
+        <div class="carte-lightbox-arrows">
+          <button
+            class="carte-lightbox-arrow carte-lightbox-prev"
+            onclick="carteSlide(-1)"
+          >
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button
+            class="carte-lightbox-arrow carte-lightbox-next"
+            onclick="carteSlide(1)"
+          >
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script>
+      var carteIndex = 0;
+      var carteImages = [];
+      var carteImageSets = {
+        carte_des_mets: [
+          "src/assets/images/menus/menu-1.webp",
+          "src/assets/images/menus/menu-2.webp",
+        ],
+        boissons: [
+          "src/assets/images/menus/boisson-1.webp",
+          "src/assets/images/menus/boisson-2.webp",
+          "src/assets/images/menus/boisson-3.webp",
+          "src/assets/images/menus/boisson-4.webp",
+          "src/assets/images/menus/boisson-5.webp",
+        ],
+      };
+      function ouvrirCarte() {
+        var activeBtn = document.querySelector(
+          ".restaurant_navigation_buttons .active_button",
+        );
+        var target = activeBtn ? activeBtn.dataset.target : "carte_des_mets";
+        carteImages = carteImageSets[target] || carteImageSets.carte_des_mets;
+        carteIndex = 0;
+        document.getElementById("carte-lightbox-img").src = carteImages[0];
+        document.getElementById("carte-lightbox").classList.add("open");
+      }
+      function carteSlide(dir) {
+        carteIndex =
+          (carteIndex + dir + carteImages.length) % carteImages.length;
+        document.getElementById("carte-lightbox-img").src =
+          carteImages[carteIndex];
+      }
+    </script>
+
+    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/slider.js"></script>
+    <script type="module" src="/src/js/translation.js"></script>
+    <script type="module" src="/src/js/transition.js"></script>
+    <script type="module" src="/src/js/animation.js"></script>
+    <script src="/src/js/formulaire.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/fr.js"></script>
+    <script>
+      flatpickr("#date-resto", {
+        locale: "fr",
+        dateFormat: "d/m/Y",
+        minDate: "today",
+        disableMobile: false,
+      });
+      flatpickr("#heure-resto", {
+        enableTime: true,
+        noCalendar: true,
+        dateFormat: "H:i",
+        time_24hr: true,
+        minuteIncrement: 15,
+        minTime: "11:30",
+        maxTime: "22:00",
+      });
+    </script>
+  </body>
+</html>

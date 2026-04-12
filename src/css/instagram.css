@@ -1,0 +1,30 @@
+#instagram .section_header p:last-of-type {
+  font-weight: 600;
+}
+
+.instagram_grid {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.instagram_grid img {
+  flex: 1 1 0;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .instagram_grid {
+    flex-wrap: wrap;
+    max-width: 450px;
+  }
+
+  .instagram_grid img {
+    flex: 1 1 calc(50% - 5px);
+  }
+}
