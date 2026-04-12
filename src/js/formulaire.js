@@ -152,3 +152,6 @@ function sendHotelReservation(event) {
     );
   }, 1000);
 }
+
+window.sendWhatsAppReservation = sendWhatsAppReservation;
+window.sendHotelReservation = sendHotelReservation;

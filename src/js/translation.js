@@ -32,7 +32,7 @@ function applyLanguage(lang) {
     location.reload();
     return;
   }
-  fetch(`/src/json/${lang}.json`)
+  fetch(`/json/${lang}.json`)
     .then((r) => r.json())
     .then(applyTranslations);
 }

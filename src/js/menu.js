@@ -130,7 +130,7 @@ function updateDots(activeIndex) {
   });
 }
 
-fetch(`/src/json/${lang}.json`)
+fetch(`/json/${lang}.json`)
   .then((r) => r.json())
   .then((t) => {
     document.getElementById("semaine_titre").textContent =
