@@ -19,45 +19,51 @@ window.addEventListener("load", () => {
 // Navbar scroll effect
 const navbar = document.querySelector(".navbar");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-});
+if (navbar) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+}
 
 const burgerButton = document.getElementById("burger_button");
 const mobileMenu = document.getElementById("mobile_menu");
 
-burgerButton.addEventListener("click", () => {
-  burgerButton.classList.toggle("open");
-  mobileMenu.classList.toggle("open");
+if (burgerButton && mobileMenu) {
+  burgerButton.addEventListener("click", () => {
+    burgerButton.classList.toggle("open");
+    mobileMenu.classList.toggle("open");
 
-  const navbar = document.querySelector(".navbar");
-  if (mobileMenu.classList.contains("open")) {
-    navbar.classList.add("scrolled", "menu-open");
-    document.body.style.overflow = "hidden";
-  } else {
-    navbar.classList.remove("menu-open");
-    document.body.style.overflow = "";
-    if (window.scrollY === 0) {
-      navbar.classList.remove("scrolled");
+    const navbar = document.querySelector(".navbar");
+    if (mobileMenu.classList.contains("open")) {
+      navbar.classList.add("scrolled", "menu-open");
+      document.body.style.overflow = "hidden";
+    } else {
+      navbar.classList.remove("menu-open");
+      document.body.style.overflow = "";
+      if (window.scrollY === 0) {
+        navbar.classList.remove("scrolled");
+      }
     }
-  }
-});
+  });
+}
 
 const reserverBtn = document.getElementById("reserver_btn");
-const reserverDropdown = reserverBtn.closest(".reserver_dropdown");
+const reserverDropdown = reserverBtn ? reserverBtn.closest(".reserver_dropdown") : null;
 
-reserverBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  reserverDropdown.classList.toggle("open");
-});
+if (reserverBtn && reserverDropdown) {
+  reserverBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    reserverDropdown.classList.toggle("open");
+  });
 
-document.addEventListener("click", () => {
-  reserverDropdown.classList.remove("open");
-});
+  document.addEventListener("click", () => {
+    reserverDropdown.classList.remove("open");
+  });
+}
 
 // Navigation restaurant
 const navButtons = document.querySelectorAll(
