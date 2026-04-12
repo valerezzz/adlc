@@ -1,3 +1,5 @@
+import logoBSrc from "../assets/images/logo-b.svg";
+
 const SUPABASE_URL = "https://kcobewoyovoaobhysaan.supabase.co";
 const SUPABASE_KEY =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtjb2Jld295b3ZvYW9iaHlzYWFuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk0MjAzOTcsImV4cCI6MjA2NDk5NjM5N30.RqZS7Ivd7pdu3uEDFef0sodPQtEbPDwp6ZFd42SaVB0";
@@ -81,7 +83,7 @@ function buildSlide(jourDB, menusData, t) {
       <div class="restaurant_card menu_day_card">
         <div class="restaurant_card_container">
           <div class="restaurant_card_header">
-            <img src="src/assets/images/logo-b.svg" alt="" />
+            <img src="${logoBSrc}" alt="" />
           </div>
           <div class="restaurant_card_body">
             ${bodyHTML}
