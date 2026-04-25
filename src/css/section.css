@@ -236,6 +236,7 @@
   text-transform: uppercase;
   font-family: "Space Grotesk", sans-serif;
   font-size: 7.5rem;
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {

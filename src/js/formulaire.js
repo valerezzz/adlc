@@ -118,7 +118,8 @@ function sendHotelReservation(event) {
   // Créer le message WhatsApp
   const timeOfDay = new Date().getHours() < 18 ? "Bonjour" : "Bonsoir";
   let message = timeOfDay + ",\n\n";
-  message += "Je souhaite réserver une chambre à l'Auberge de Mies - La Couronne\n\n";
+  message +=
+    "Je souhaite réserver une chambre à l'Auberge de Mies - La Couronne\n\n";
   message += "Nom: " + guestName + "\n";
   message += "Email: " + guestEmail + "\n";
   message += "Arrivée: " + formattedCheckIn + "\n";
